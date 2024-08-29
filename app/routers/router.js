@@ -4,6 +4,9 @@ let router = express.Router();
 
 const employee = require('../controllers/emp.controller.js');
 const depart = require('../controllers/dept.controller.js');
+const customer = require('../controllers/cust.controller.js');
+const supplier = require('../controllers/supp.controller.js');
+const product = require('../controllers/prod.controller.js');
 
 //router de Empleados - Employee
 router.post('/api/employee/create', employee.create);
@@ -30,5 +33,10 @@ router.get('/api/supplier/onebyid/:id_s', supplier.getSupplierById);
 router.put('/api/supplier/update/:id_s', supplier.updateById);
 router.delete('/api/supplier/delete/:id_s', supplier.deleteById);
 //Router de Productos - Product
+router.post('/api/product/create', product.create);
+router.get('/api/product/all', product.retrieveAllProduct);
+router.get('/api/product/onebyid/:id_pr', product.getProductById);
+router.put('/api/product/update/:id_pr', product.updateById);
+router.delete('/api/product/delete/:id_pr', product.deleteById);
 
 module.exports = router; 
