@@ -18,4 +18,5 @@ router.get('/api/depart/all', depart.retrieveAllDepart);
 router.get('/api/depart/onebyid/:id_p', depart.getDepartById);
 router.put('/api/depart/update/:id_p', depart.updateById);
 router.delete('/api/depart/delete/:id_p', depart.deleteById);
+
 module.exports = router; 
