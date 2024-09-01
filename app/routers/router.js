@@ -8,6 +8,7 @@ const customer = require('../controllers/cust.controller.js');
 const supplier = require('../controllers/supp.controller.js');
 const product = require('../controllers/prod.controller.js');
 const invoice = require('../controllers/invo.controller.js');
+const invdetail = require('../controllers/invdetail.controller.js');
 
 //router de Empleados - Employee
 router.post('/api/employee/create', employee.create);
@@ -45,5 +46,11 @@ router.get('/api/invoice/all', invoice.retrieveAllInvoice);
 router.get('/api/invoice/onebyid/:id_i', invoice.getInvoiceById);
 router.put('/api/invoice/update/:id_i', invoice.updateById);
 router.delete('/api/invoice/delete/:id_i', invoice.deleteById);
+//Router de Detalle Factura - Invoice Details
+router.post('/api/invoice/details/create', invoice.createDetails);
+router.get('/api/invoice/details/all', invoice.retrieveAllDetails);
+router.get('/api/invoice/details/onebyid/:id_d', invoice.getDetailById);
+router.put('/api/invoice/details/update/:id_d', invoice.updateDetailsById);
+router.delete('/api/invoice/details/delete/:id_d', invoice.deleteDetailsById);
 
 module.exports = router; 
