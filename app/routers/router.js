@@ -47,7 +47,7 @@ router.get('/api/invoice/onebyid/:id_i', invoice.getInvoiceById);
 router.put('/api/invoice/update/:id_i', invoice.updateById);
 router.delete('/api/invoice/delete/:id_i', invoice.deleteById);
 //Router de Detalle Factura - Invoice Details
-router.post('/api/invoice/details/create', invoice.createDetails);
+router.post('/api/invoice/details/create', invoice.create);
 router.get('/api/invoice/details/all', invoice.retrieveAllDetails);
 router.get('/api/invoice/details/onebyid/:id_d', invoice.getDetailById);
 router.put('/api/invoice/details/update/:id_d', invoice.updateDetailsById);
