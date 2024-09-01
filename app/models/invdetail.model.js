@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-    const InvoDetail = sequelize.define('InvoDeta', {
+    const InvoDetail = sequelize.define('invodeta', {
       id_factura: {
         type: Sequelize.NUMERIC,
         primaryKey: true
