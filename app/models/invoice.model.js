@@ -23,5 +23,5 @@ module.exports = (sequelize, Sequelize) => {
     }
 	});
 	
-	return Depart;
+	return Invoice;
 }
